@@ -6,9 +6,9 @@ use regex::Regex;
 
 fn main() {
 
-    let btc_re = Regex::new(r"(bc1|[13])[a-zA-HJ-NP-Z0-9]{25,39}").unwrap();
+    let btc_re = Regex::new(r"^(bc1|[13])[a-zA-HJ-NP-Z0-9]{25,39}$").unwrap();
     let eth_re = Regex::new(r"0x[a-fA-F0-9]{40}").unwrap();
-    let xmr_re = Regex::new(r"[48][1-9A-HJ-NP-Za-km-z]{94}").unwrap();
+    let xmr_re = Regex::new(r"^[48][1-9A-HJ-NP-Za-km-z]{94}$").unwrap();
 
 
 
